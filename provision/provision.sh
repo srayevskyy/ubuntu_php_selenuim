@@ -1,19 +1,20 @@
 #!/bin/sh
 
-set -x
+set -x -e
 
 sudo apt update
-sudo apt install -y mc apache2 curl mysql-server php libapache2-mod-php php-mysql openjdk-8-jdk php7.4-zip php7.4-mbstring php7.4-xml php7.4-curl
+sudo apt install -y mc apache2 curl mysql-server php7.4 libapache2-mod-php7.4 php7.4-mysql openjdk-8-jdk php7.4-zip php7.4-mbstring php7.4-xml php7.4-curl
 sudo snap install netbeans --classic
 sudo curl -s https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
-cd /var/www
-sudo chmod 777 /var/www/html
-cd /var/www/html
 sudo chmod 777 /usr/local/bin/composer
+sudo chmod 777 /var/www/html
+sudo rm -rfv /var/www/html/*
+cd /var/www/html
 composer require codeception/codeception --dev
-composer update
-echo -e "y\n" | php vendor/bin/codecept bootstrap
+sudo chmod -R 777 /var/www/html
+yes | php vendor/bin/codecept bootstrap 
+sudo chmod -R 777 /var/www/html
 composer require --dev codeception/module-webdriver
 cd ~
 wget https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-linux64.tar.gz
