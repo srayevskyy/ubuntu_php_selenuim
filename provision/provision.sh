@@ -15,6 +15,7 @@ composer require codeception/codeception --dev
 sudo chmod -R 777 /var/www/html
 yes | php vendor/bin/codecept bootstrap 
 sudo chmod -R 777 /var/www/html
+wget https://codeception.com/codecept.phar
 composer require --dev codeception/module-webdriver
 cd ~
 wget https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-linux64.tar.gz
