@@ -23,4 +23,4 @@ tar -xvzf geckodriver*
 sudo chmod +x geckodriver
 sudo mv geckodriver /usr/local/bin/
 wget https://selenium-release.storage.googleapis.com/3.141/selenium-server-standalone-3.141.59.jar --directory-prefix=/home/vagrant
-nohup java -jar /home/vagrant/selenium-server-standalone-3.141.59.jar </dev/null >/dev/null 2>&1 &
+# nohup java -jar /home/vagrant/selenium-server-standalone-3.141.59.jar </dev/null >/dev/null 2>&1 &
