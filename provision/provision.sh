@@ -17,10 +17,10 @@ yes | php vendor/bin/codecept bootstrap
 sudo chmod -R 777 /var/www/html
 wget https://codeception.com/codecept.phar
 composer require --dev codeception/module-webdriver
-cd ~
+cd /home/vagrant
 wget https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-linux64.tar.gz
 tar -xvzf geckodriver*
 sudo chmod +x geckodriver
 sudo mv geckodriver /usr/local/bin/
-wget https://selenium-release.storage.googleapis.com/3.141/selenium-server-standalone-3.141.59.jar
+wget https://selenium-release.storage.googleapis.com/3.141/selenium-server-standalone-3.141.59.jar --directory-prefix=/home/vagrant
 #java -jar selenium-server-standalone-3.141.59.jar
