@@ -7,7 +7,15 @@
 actor: AcceptanceTester
 modules:
     enabled:
-        - PhpBrowser:
-            url: http://localhost/myapp
+#        - PhpBrowser:
+        - WebDriver:
+            url: https://1dom.dev/ru
+#            url: https://1dom.net
+            host: 'firefox'
+            port: 4444
+            browser: firefox
+            window_size: false
+            restart: true
+            pageload_timeout: 20
         - \Helper\Acceptance
-step_decorators: ~        
+    step_decorators: ~

@@ -3,10 +3,10 @@ services:
   codecept:
     image: codeception/codeception
     depends_on:
-      - chrome
+      - firefox
     volumes:
       - .:/project
-  chrome:
-    image: selenium/standalone-chrome-debug
+  firefox:
+    image: selenium/standalone-firefox-debug
     ports:
       - "5900:5900"
