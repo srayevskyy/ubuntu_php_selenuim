@@ -5,12 +5,12 @@ Reference: https://codeception.com/docs/12-ParallelExecution
 
 ### If I need to run tests outside container (for example, from my Windows PowerShell):
 ```
-docker-compose run --rm --workdir '/project/1dom_tests' codecept run acceptance
+docker-compose run --rm --workdir "/project/1dom_tests" codecept run acceptance
 ```
 
 ### If I need to run shell and then run tests inside container:
 ```
-docker-compose run --rm --workdir '/project/1dom_tests' --entrypoint bash codecept
+docker-compose run --rm --workdir "/project/1dom_tests" --entrypoint bash codecept
 codecept run acceptance
 ```
 
